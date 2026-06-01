@@ -616,6 +616,235 @@ window.open(
 }
 
 </script>
+    <!-- PAYMENT SECTION -->
+
+<section id="payment" class="py-24 bg-zinc-950">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="text-center mb-16">
+
+<div class="inline-block px-4 py-2 rounded-full bg-green-900/30 border border-green-700 mb-4">
+PEMBAYARAN
+</div>
+
+<h2 class="text-4xl md:text-5xl font-bold">
+Pembayaran Mudah & Aman
+</h2>
+
+<p class="text-zinc-400 mt-4 max-w-2xl mx-auto">
+Mendukung pembayaran melalui QRIS, E-Wallet, Mobile Banking dan Cryptocurrency.
+</p>
+
+</div>
+
+<div class="grid lg:grid-cols-2 gap-8">
+
+<!-- QRIS -->
+
+<div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 glow-blue">
+
+<div class="flex items-center gap-3 mb-6">
+
+<div class="w-12 h-12 rounded-2xl bg-green-500 flex items-center justify-center text-xl">
+💳
+</div>
+
+<div>
+
+<h3 class="font-bold text-2xl">
+QRIS
+</h3>
+
+<p class="text-zinc-400 text-sm">
+Semua E-Wallet & Mobile Banking
+</p>
+
+</div>
+
+</div>
+
+<img
+src="qris.png"
+alt="QRIS"
+class="w-full max-w-sm mx-auto rounded-3xl border border-zinc-700">
+
+<div class="grid grid-cols-3 gap-3 mt-8">
+
+<div class="bg-zinc-800 rounded-xl py-3 text-center text-sm">
+DANA
+</div>
+
+<div class="bg-zinc-800 rounded-xl py-3 text-center text-sm">
+GoPay
+</div>
+
+<div class="bg-zinc-800 rounded-xl py-3 text-center text-sm">
+OVO
+</div>
+
+<div class="bg-zinc-800 rounded-xl py-3 text-center text-sm">
+ShopeePay
+</div>
+
+<div class="bg-zinc-800 rounded-xl py-3 text-center text-sm">
+BCA
+</div>
+
+<div class="bg-zinc-800 rounded-xl py-3 text-center text-sm">
+BRI
+</div>
+
+<div class="bg-zinc-800 rounded-xl py-3 text-center text-sm">
+BNI
+</div>
+
+<div class="bg-zinc-800 rounded-xl py-3 text-center text-sm">
+Mandiri
+</div>
+
+<div class="bg-zinc-800 rounded-xl py-3 text-center text-sm">
+blu BCA
+</div>
+
+</div>
+
+</div>
+
+<!-- CRYPTO -->
+
+<div class="space-y-6">
+
+<!-- USDT -->
+
+<div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+
+<div class="flex justify-between items-center mb-5">
+
+<h3 class="font-bold text-2xl text-green-400">
+USDT (TRC20)
+</h3>
+
+<div class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">
+REKOMENDASI
+</div>
+
+</div>
+
+<div
+id="usdtWallet"
+class="bg-zinc-800 p-4 rounded-2xl break-all text-zinc-300">
+
+TJxYUo95h2d2eUsYhNiYRfeBc2UzLjvmZE
+
+</div>
+
+<button
+onclick="copyUSDT()"
+class="mt-4 bg-green-500 hover:bg-green-600 px-6 py-3 rounded-xl font-semibold">
+
+Salin Alamat USDT
+
+</button>
+
+</div>
+
+<!-- BTC -->
+
+<div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+
+<h3 class="font-bold text-2xl text-orange-400 mb-5">
+Bitcoin (BTC)
+</h3>
+
+<div
+id="btcWallet"
+class="bg-zinc-800 p-4 rounded-2xl break-all text-zinc-300">
+
+3J5MX7PXNqap9kgjzhioPqKX6ovc5qZCAQ
+
+</div>
+
+<button
+onclick="copyBTC()"
+class="mt-4 bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-xl font-semibold">
+
+Salin Alamat BTC
+
+</button>
+
+</div>
+
+<!-- TRUST -->
+
+<div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+
+<div class="space-y-4">
+
+<div>
+✅ Pembayaran Aman
+</div>
+
+<div>
+✅ Verifikasi Manual Oleh Admin
+</div>
+
+<div>
+✅ Dukungan Customer Service
+</div>
+
+<div>
+✅ Proses Cepat Setelah Pembayaran
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="text-center mt-12">
+
+<a
+href="https://wa.me/6285179773212?text=Halo Admin,%20Saya%20sudah%20melakukan%20pembayaran.%20Mohon%20dibantu%20untuk%20verifikasi."
+target="_blank"
+class="inline-block bg-green-500 hover:bg-green-600 px-12 py-5 rounded-2xl font-bold text-lg shadow-2xl">
+
+Saya Sudah Bayar
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+function copyUSDT(){
+
+navigator.clipboard.writeText(
+"TJxYUo95h2d2eUsYhNiYRfeBc2UzLjvmZE"
+);
+
+alert("Alamat USDT berhasil disalin");
+
+}
+
+function copyBTC(){
+
+navigator.clipboard.writeText(
+"3J5MX7PXNqap9kgjzhioPqKX6ovc5qZCAQ"
+);
+
+alert("Alamat BTC berhasil disalin");
+
+}
+
+</script>
 
 <!-- TESTIMONI -->
 
@@ -1384,6 +1613,13 @@ const activities = [
 "memesan 10.000 Instagram Followers",
 "memesan 20.000 Instagram Followers",
 "memesan 50.000 Instagram Followers",
+"memesan 1.000 Instagram Followers",
+"memesan 1.000 Instagram Followers",
+"memesan 5.000 Instagram Followers",
+"memesan 5.000 Instagram Followers",
+"memesan 10.000 Instagram Followers",
+"memesan 10.000 Instagram Followers",
+"memesan 20.000 Instagram Followers",
 
 "memesan 100 Instagram Likes",
 "memesan 500 Instagram Likes",
@@ -1426,15 +1662,12 @@ const activities = [
 "memesan 10.000 TikTok Views",
 "memesan 20.000 TikTok Views",
 "memesan 50.000 TikTok Views",
-"memesan 100.000 TikTok Views",
 "memesan 1.000 TikTok Views",
 "memesan 5.000 TikTok Views",
 "memesan 10.000 TikTok Views",
 "memesan 20.000 TikTok Views",
 "memesan 50.000 TikTok Views",
-"memesan 100.000 TikTok Views"
 
-"memesan 100 YouTube Subscribers",
 "memesan 500 YouTube Subscribers",
 "memesan 1.000 YouTube Subscribers",
 "memesan 2.500 YouTube Subscribers",
