@@ -77,23 +77,18 @@ transition:.3s;
 .card:hover{
 transform:translateY(-8px);
 }
-    .marquee-wrapper{
-overflow:hidden;
-white-space:nowrap;
-}
-
-.marquee-text{
-display:inline-block;
+    .animate-marquee{
 padding-left:100%;
-animation:marqueeMove 20s linear infinite;
+animation:marqueeMove 15s linear infinite;
 }
 
 @keyframes marqueeMove{
 0%{
 transform:translateX(0);
 }
+
 100%{
-transform:translateX(-100%);
+transform:translateX(-200%);
 }
 }
     
@@ -151,18 +146,18 @@ WhatsApp
 </div>
 
 </nav>
-    
- <!-- RUNNING TEXT -->
 
-<div class="bg-yellow-500 text-black font-semibold py-3 marquee-wrapper">
+<!-- RUNNING TEXT -->
 
-<div class="marquee-text">
+<div class="bg-yellow-500 text-black font-semibold py-3 overflow-hidden mt-[72px]">
+
+<div class="inline-block whitespace-nowrap animate-marquee">
 
 📢 INFO : Paket Instagram lagi mengalami keterlambatan proses. Mohon maaf atas ketidaknyamanannya 🙏
 
 </div>
 
-</div>   
+</div>
 
 <!-- HERO -->
 
