@@ -710,7 +710,148 @@ blu BCA
 </div>
 
 </div>
+<!-- E-WALLET -->
 
+<div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 mt-8">
+
+<h3 class="text-2xl font-bold mb-6">
+E-Wallet
+</h3>
+
+<div class="grid md:grid-cols-2 gap-5">
+
+<!-- DANA -->
+
+<div class="bg-zinc-800 rounded-2xl p-5">
+
+<img src="dana.webp" class="h-10 mb-4">
+
+<div class="text-zinc-400 text-sm">
+Atas Nama
+</div>
+
+<div class="font-bold mb-3">
+Arvian Yohanes
+</div>
+
+<div class="text-zinc-400 text-sm">
+Nomor
+</div>
+
+<div class="font-bold mb-4">
+0851****3212
+</div>
+
+<button
+onclick="copyNumber()"
+class="w-full bg-blue-600 hover:bg-blue-700 py-3 rounded-xl font-semibold">
+
+Salin Nomor
+
+</button>
+
+</div>
+
+<!-- GOPAY -->
+
+<div class="bg-zinc-800 rounded-2xl p-5">
+
+<img src="gopay.webp" class="h-10 mb-4">
+
+<div class="text-zinc-400 text-sm">
+Atas Nama
+</div>
+
+<div class="font-bold mb-3">
+Arvian Yohanes
+</div>
+
+<div class="text-zinc-400 text-sm">
+Nomor
+</div>
+
+<div class="font-bold mb-4">
+0851****3212
+</div>
+
+<button
+onclick="copyNumber()"
+class="w-full bg-sky-600 hover:bg-sky-700 py-3 rounded-xl font-semibold">
+
+Salin Nomor
+
+</button>
+
+</div>
+
+<!-- OVO -->
+
+<div class="bg-zinc-800 rounded-2xl p-5">
+
+<img src="ovo.webp" class="h-10 mb-4">
+
+<div class="text-zinc-400 text-sm">
+Atas Nama
+</div>
+
+<div class="font-bold mb-3">
+Arvian Yohanes
+</div>
+
+<div class="text-zinc-400 text-sm">
+Nomor
+</div>
+
+<div class="font-bold mb-4">
+0851****3212
+</div>
+
+<button
+onclick="copyNumber()"
+class="w-full bg-purple-600 hover:bg-purple-700 py-3 rounded-xl font-semibold">
+
+Salin Nomor
+
+</button>
+
+</div>
+
+<!-- SHOPEEPAY -->
+
+<div class="bg-zinc-800 rounded-2xl p-5">
+
+<img src="shopeepay.webp" class="h-10 mb-4">
+
+<div class="text-zinc-400 text-sm">
+Atas Nama
+</div>
+
+<div class="font-bold mb-3">
+Arvian Yohanes
+</div>
+
+<div class="text-zinc-400 text-sm">
+Nomor
+</div>
+
+<div class="font-bold mb-4">
+0851****3212
+</div>
+
+<button
+onclick="copyNumber()"
+class="w-full bg-orange-600 hover:bg-orange-700 py-3 rounded-xl font-semibold">
+
+Salin Nomor
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+    
 <!-- CRYPTO -->
 
 <div class="space-y-6">
@@ -1768,7 +1909,21 @@ setTimeout(showRandomOrder,nextDelay);
 
 setTimeout(showRandomOrder,1000);
 
-</script>    
+</script>
+    <script>
+
+function copyNumber(){
+
+navigator.clipboard.writeText(
+"085179773212"
+);
+
+alert("Nomor berhasil disalin");
+
+}
+
+</script>
+    
 </body>
 </html>
 
