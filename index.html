@@ -77,6 +77,26 @@ transition:.3s;
 .card:hover{
 transform:translateY(-8px);
 }
+ #liveOrder{
+position:fixed;
+left:20px;
+bottom:20px;
+z-index:9999;
+max-width:340px;
+animation:slideIn .5s ease;
+}
+
+@keyframes slideIn{
+from{
+transform:translateX(-50px);
+opacity:0;
+}
+to{
+transform:translateX(0);
+opacity:1;
+}
+}
+    
 </style>
 
 </head>
@@ -1017,45 +1037,6 @@ Jasa Media Sosial Terpercaya Indonesia
 </div>
 
 </footer>
-
-<!-- FLOATING WHATSAPP -->
-
-<a
-href="https://wa.me/6285179773212"
-target="_blank"
-class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl text-3xl">
-
-💬
-
-</a>
-<!-- FLOATING TELEGRAM PREMIUM -->
-
-<a
-href="https://t.me/hongpao88"
-target="_blank"
-class="fixed bottom-28 right-6 z-50 group">
-
-<div class="flex items-center gap-3 bg-blue-500 telegram-glow hover:bg-blue-600 transition-all duration-300 px-5 py-4 rounded-full shadow-2xl">
-
-<div class="text-3xl">
-✈️
-</div>
-
-<div class="hidden md:block">
-
-<div class="text-white font-bold text-sm">
-Telegram
-</div>
-
-<div class="text-white/80 text-xs">
-Respon Cepat
-</div>
-
-</div>
-
-</div>
-
-</a>
     
 <!-- FLOATING WHATSAPP PREMIUM -->
 
@@ -1086,6 +1067,409 @@ Online 24 Jam
 
 
 </a>
+<script>
+
+const names = [
+
+"Taufik Hidayat",
+"Budi",
+"Andy",
+"Fitri",
+"Agatha",
+
+"Ahmad Fauzi",
+"Muhammad Rizki",
+"Rizky Pratama",
+"Rizal",
+"Fadli",
+
+"Fajar",
+"Hendra",
+"Rudi",
+"Agus",
+"Yusuf",
+
+"Rahmat",
+"Deni",
+"Arif",
+"Aldi",
+"Rian",
+
+"Bayu",
+"Dimas",
+"Andika",
+"Ilham",
+"Rendi",
+
+"Fikri",
+"Firman",
+"Reza",
+"Arman",
+"Wahyu",
+
+"Doni",
+"Roni",
+"Gunawan",
+"Surya",
+"Ferry",
+
+"Rio",
+"Kevin",
+"Samuel",
+"Jonathan",
+"Daniel",
+
+"Albert",
+"Steven",
+"William",
+"Michael",
+"Christian",
+
+"Jefri",
+"Tommy",
+"Eko",
+"Joko",
+"Rangga",
+
+"Putra",
+"Yoga",
+"Iqbal",
+"Asep",
+"Ujang",
+
+"Cecep",
+"Dadang",
+"Rohman",
+"Yayan",
+"Usep",
+
+"Fitriani",
+"Siti",
+"Ayu",
+"Dewi",
+"Putri",
+
+"Nurul",
+"Rina",
+"Linda",
+"Maya",
+"Rani",
+
+"Wulan",
+"Tiara",
+"Indah",
+"Vina",
+"Melisa",
+
+"Angel",
+"Nabila",
+"Syifa",
+"Anisa",
+"Zahra",
+
+"Farah",
+"Putri Maharani",
+"Ratna",
+"Yuni",
+"Lestari",
+
+"Erika",
+"Claudia",
+"Cindy",
+"Jessica",
+"Nadya",
+
+"Olivia",
+"Kezia",
+"Felicia",
+"Monica",
+"Patricia",
+
+"Ni Luh Putu",
+"Ni Made Ayu",
+"Kadek Intan",
+"Komang Ayu",
+"Gusti Ayu",
+
+"I Gede Putu",
+"I Made Arya",
+"I Nyoman Putra",
+"I Ketut Ardana",
+"Gede Wirawan",
+
+"Maria",
+"Yohana",
+"Fransiska",
+"Bernadeta",
+"Theresia",
+
+"Martinus",
+"Yohanes",
+"Stefanus",
+"Petrus",
+"Paulus"
+
+];
+
+const cities = [
+
+"Medan","Medan","Medan","Medan","Medan","Medan","Medan","Medan","Medan","Medan",
+
+"Bandung","Bandung","Bandung","Bandung","Bandung","Bandung","Bandung","Bandung",
+
+"Jakarta","Jakarta","Jakarta","Jakarta","Jakarta",
+
+"Surabaya","Surabaya","Surabaya",
+
+"Bekasi","Bekasi","Bekasi",
+
+"Bogor","Bogor","Bogor",
+
+"Tangerang","Tangerang","Tangerang",
+
+"Depok","Depok",
+
+"Batam","Batam",
+
+"Pekanbaru","Pekanbaru",
+
+"Palembang","Palembang",
+
+"Makassar","Makassar",
+
+"Semarang","Semarang",
+
+"Yogyakarta","Yogyakarta",
+
+"Padang","Padang",
+
+"Jambi","Jambi",
+
+"Pontianak",
+
+"Samarinda",
+
+"Balikpapan",
+
+"Manado",
+
+"Banjarmasin",
+
+"Denpasar",
+
+"Malang",
+
+"Kediri",
+
+"Madiun",
+
+"Cirebon",
+
+"Garut",
+
+"Tasikmalaya",
+
+"Sukabumi",
+
+"Cianjur",
+
+"Purwakarta",
+
+"Karawang",
+
+"Subang",
+
+"Serang",
+
+"Cilegon",
+
+"Bandar Lampung",
+
+"Prabumulih",
+
+"Binjai",
+
+"Tebing Tinggi",
+
+"Siantar",
+
+"Kisaran",
+
+"Rantau Prapat",
+
+"Labuhanbatu",
+
+"Dumai",
+
+"Payakumbuh",
+
+"Bukittinggi",
+
+"Palu",
+
+"Kendari",
+
+"Gorontalo",
+
+"Mataram",
+
+"Kupang",
+
+"Ambon",
+
+"Jayapura"
+
+];
+
+const activities = [
+
+"memesan 100 Instagram Followers",
+"memesan 200 Instagram Followers",
+"memesan 300 Instagram Followers",
+"memesan 500 Instagram Followers",
+"memesan 750 Instagram Followers",
+"memesan 1.000 Instagram Followers",
+"memesan 2.000 Instagram Followers",
+"memesan 5.000 Instagram Followers",
+"memesan 10.000 Instagram Followers",
+"memesan 20.000 Instagram Followers",
+"memesan 50.000 Instagram Followers",
+
+"memesan 100 Instagram Likes",
+"memesan 500 Instagram Likes",
+"memesan 1.000 Instagram Likes",
+"memesan 2.500 Instagram Likes",
+"memesan 5.000 Instagram Likes",
+"memesan 10.000 Instagram Likes",
+"memesan 20.000 Instagram Likes",
+
+"memesan 500 Instagram Views",
+"memesan 1.000 Instagram Views",
+"memesan 5.000 Instagram Views",
+"memesan 10.000 Instagram Views",
+"memesan 25.000 Instagram Views",
+"memesan 50.000 Instagram Views",
+
+"memesan 100 TikTok Followers",
+"memesan 200 TikTok Followers",
+"memesan 500 TikTok Followers",
+"memesan 1.000 TikTok Followers",
+"memesan 2.500 TikTok Followers",
+"memesan 5.000 TikTok Followers",
+"memesan 10.000 TikTok Followers",
+"memesan 20.000 TikTok Followers",
+"memesan 50.000 TikTok Followers",
+
+"memesan 500 TikTok Likes",
+"memesan 1.000 TikTok Likes",
+"memesan 5.000 TikTok Likes",
+"memesan 10.000 TikTok Likes",
+"memesan 20.000 TikTok Likes",
+
+"memesan 1.000 TikTok Views",
+"memesan 5.000 TikTok Views",
+"memesan 10.000 TikTok Views",
+"memesan 20.000 TikTok Views",
+"memesan 50.000 TikTok Views",
+"memesan 100.000 TikTok Views",
+
+"memesan 100 YouTube Subscribers",
+"memesan 500 YouTube Subscribers",
+"memesan 1.000 YouTube Subscribers",
+"memesan 2.500 YouTube Subscribers",
+"memesan 5.000 YouTube Subscribers",
+"memesan 10.000 YouTube Subscribers",
+
+"memesan 1.000 YouTube Likes",
+"memesan 5.000 YouTube Likes",
+"memesan 10.000 YouTube Likes",
+
+"memesan 1.000 YouTube Views",
+"memesan 5.000 YouTube Views",
+"memesan 10.000 YouTube Views",
+"memesan 20.000 YouTube Views",
+"memesan 50.000 YouTube Views",
+"memesan 100.000 YouTube Views",
+
+"memesan 100 Facebook Followers",
+"memesan 500 Facebook Followers",
+"memesan 1.000 Facebook Followers",
+"memesan 5.000 Facebook Followers",
+"memesan 10.000 Facebook Followers",
+
+"memesan 500 Facebook Likes",
+"memesan 1.000 Facebook Likes",
+"memesan 5.000 Facebook Likes",
+
+"memesan 1.000 Facebook Views",
+"memesan 5.000 Facebook Views",
+"memesan 10.000 Facebook Views",
+"memesan 25.000 Facebook Views",
+
+"memesan 100 Telegram Members",
+"memesan 500 Telegram Members",
+"memesan 1.000 Telegram Members",
+"memesan 5.000 Telegram Members",
+"memesan 10.000 Telegram Members",
+
+"memesan 500 Telegram Views",
+"memesan 1.000 Telegram Views",
+"memesan 5.000 Telegram Views",
+"memesan 10.000 Telegram Views",
+
+"memesan 100 Discord Members",
+"memesan 500 Discord Members",
+"memesan 1.000 Discord Members",
+"memesan 5.000 Discord Members",
+
+"memesan 100 X Followers",
+"memesan 500 X Followers",
+"memesan 1.000 X Followers",
+"memesan 5.000 X Followers",
+
+"memesan 500 X Likes",
+"memesan 1.000 X Likes",
+"memesan 5.000 X Likes"
+
+];
+function showRandomOrder(){
+
+const name =
+names[Math.floor(Math.random()*names.length)];
+
+const city =
+cities[Math.floor(Math.random()*cities.length)];
+
+const activity =
+activities[Math.floor(Math.random()*activities.length)];
+
+document.getElementById("orderName").innerText =
+name + " - " + city;
+
+document.getElementById("orderActivity").innerText =
+activity;
+
+const popup =
+document.getElementById("liveOrder");
+
+popup.classList.remove("hidden");
+
+setTimeout(() => {
+
+popup.classList.add("hidden");
+
+const nextDelay =
+Math.floor(Math.random()*8000)+4000;
+
+setTimeout(showRandomOrder,nextDelay);
+
+},5000);
+
+}
+
+setTimeout(showRandomOrder,3000);
+
+</script>    
 </body>
 </html>
 
